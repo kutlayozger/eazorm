@@ -1,6 +1,6 @@
 {
   "name": "eazorm",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage" : "http://www.ozger.com/jslib/eazorm",
   "description": "Mysql basic ORM package",
   "main": "lib/eazorm.js",

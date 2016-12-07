@@ -7,6 +7,7 @@
         mysql = require('mysql'),
         fysislem = {},
         config,
+        func = {},
         connection;
     config = {
     //    databaseUrl : "46.252.193.250/atlas",
@@ -45,12 +46,21 @@
     };
     eaz.coverObjects(fysislem, ['Arac', 'Surucu', 'AracTur', 'Firma', 'AracMuayene', 'AracKaza', 'AracCeza', 'AracSigorta', 'AracMasraf', 'YakitFis', 'Departman', 'Bolge', 'Personel']);
 
-
+    eaz.coverAllObjects(func);
     describe('Basic library test', function () {
         it('Dep control from test db', function (done) {
             this.timeout(10000);
             console.dir(fysislem);
             fysislem.loadDepartman({query: {id: 1}}).then(function (o) {
+                console.log('o', o.obj);
+                assert.equal(o.obj.DepartmanAdi, 'das');
+                done();
+            }, function (err) {
+                console.log('rejected', err);
+            });
+        });
+        it('coverAllObjects', function (done) {
+            func.loaddepartman({query: {id: 1}}).then(function (o) {
                 console.log('o', o.obj);
                 assert.equal(o.obj.DepartmanAdi, 'das');
                 done();
