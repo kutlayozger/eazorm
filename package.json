@@ -1,0 +1,32 @@
+{
+  "name": "eazorm",
+  "version": "0.0.3",
+  "homepage" : "http://www.ozger.com/jslib/eazorm",
+  "description": "Mysql basic ORM package",
+  "main": "lib/eazorm.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "mysql",
+    "orm",
+    "nodejs"
+  ],
+  "author" : {
+    "name" : "Kutlay Ozger"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint" : "~0.6.0",
+    "grunt-contrib-uglify" : "~0.2.2",
+    "grunt-contrib-concat" : "~0.3.0",
+    "grunt-contrib-watch"  : "~0.4.4",
+    "matchdep"             : "~0.1.2",
+    "grunt-mocha-test" : "~0.7.0",
+    "mysql": "*"
+  }
+}
+
+
